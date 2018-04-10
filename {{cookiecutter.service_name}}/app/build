@@ -1,0 +1,6 @@
+#!/bin/bash
+
+scons
+strip ./client
+cp ./client /build
+scons -uc
