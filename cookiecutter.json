@@ -1,0 +1,20 @@
+{
+    "service_title": "Microservice 1 (AutobahnCpp based)",
+    "service_name": "microservice_1",
+
+    "architecture": ["amd64", "armhf", "aarch64"],
+    "toolchain": ["gcc", "clang"],
+    "version": ["18.4.1"],
+
+    "image": "{{ 'crossbario/autobahn-cpp' + ('' if cookiecutter.architecture == 'amd64' else ('-' + cookiecutter.architecture)) + ':' + cookiecutter.toolchain + '-' + cookiecutter.version }}",
+
+    "url": "ws://localhost:8080/ws",
+    "realm": "realm1",
+
+    "_copy_without_render": [
+    ],
+
+    "uid": null,
+    "service_uuid": null,
+    "generated": null
+}

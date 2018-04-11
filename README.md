@@ -1,2 +1,3 @@
 # cookiecutter-autobahn-cpp
-Cookiecutter project templates for AutobahnCpp
+
+Cookiecutter project template for Autobahn C++.
