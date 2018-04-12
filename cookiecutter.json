@@ -4,9 +4,9 @@
 
     "architecture": ["amd64", "armhf", "aarch64"],
     "toolchain": ["gcc", "clang"],
-    "version": ["18.4.1"],
+    "version": ["latest", "18.4.1"],
 
-    "image": "{{ 'crossbario/autobahn-cpp' + ('' if cookiecutter.architecture == 'amd64' else ('-' + cookiecutter.architecture)) + ':' + cookiecutter.toolchain + '-' + cookiecutter.version }}",
+    "image": "{{ 'crossbario/autobahn-cpp' + ('' if cookiecutter.architecture == 'amd64' else ('-' + cookiecutter.architecture)) + ':' + cookiecutter.toolchain + ('-' + cookiecutter.version if cookiecutter.version != 'latest' else '') }}",
 
     "url": "ws://localhost:8080/ws",
     "realm": "realm1",

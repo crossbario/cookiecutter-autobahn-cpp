@@ -5,11 +5,7 @@ build:
 image: {{ 'img_' + cookiecutter.service_name }}
 user: "{{ cookiecutter.uid }}"
 network_mode: host
-entrypoint: /usr/local/bin/python
+entrypoint: /client
 command:
-  - -u
-  - client.py
-  - --url={{ cookiecutter.url }}
-  - --realm={{ cookiecutter.realm }}
-  - --service_name={{ cookiecutter.service_name }}
-  - --service_uuid={{ cookiecutter.service_uuid }}
+  - "127.0.0.1"
+  - "8080"
